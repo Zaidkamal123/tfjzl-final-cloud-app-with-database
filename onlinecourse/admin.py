@@ -25,12 +25,12 @@ class ChoiceInline(admin.StackedInline):
 	model = Choice
 	extra = 2
 
-	class QuestionInline(admin.StackedInline):
+class QuestionInline(admin.StackedInline):
 	model = Question
 	extra = 2
 
 class QuestionAdmin(admin.ModelAdmin):
-		inlines = [ChoiceInline]
+	inlines = [ChoiceInline]
 		list_display = ['content']
 
 # <HINT> Register Question and Choice models here
